@@ -1,6 +1,7 @@
+  Fork from http://sourceforge.net/projects/jcblock/
 
 	Program: jcblock
-	
+
 	A program to block telemarketing (junk) calls.
 
 	RECENT ACTIVITY:
@@ -57,12 +58,12 @@
         match. If it finds a match to a string in the blacklist, it sends
         an off-hook command (ATH1) to the modem, followed by an on-hook
         command (ATH0). This terminates the junk call.
-  
+
         The program also updates the date field of a matching whitelist or
         blacklist entry. Entries that are old may then be identified so
         that they may be removed. Note that the program will operate with
         only a blacklist.dat file defined. A whitelist is not required.
-  
+
         Functions to manage the truncation (removal) of records from the
         blacklist.dat and callerID.dat files are present in file truncate.c.
         Records in the blacklist.dat file that have not been used to
@@ -70,7 +71,7 @@
 	in the callerID.dat file that are older than nine months are removed.
 	The operations are performed every thirty days. Alternatively,
 	entries in the .dat files may be edited manually.
-  
+
         An additional feature is supported by functions in file tones.c.
         The program will add a record to the blacklist.dat file for the
         current call if the operator presses the star (*, asterick) key on
@@ -95,7 +96,7 @@
         caller ID and the star key tones; the modem's normal communication
         function is not used. The program may be terminated by sending
         it a SIGINT (Ctrl-C) signal or a SIGKILL signal.
-  
+
         The program runs on a standard PC (it was written and tested
         on a Dell Dimension B110 running Ubuntu). The features
         supported by functions in files truncate.c and tones.c may be
@@ -106,10 +107,10 @@
 
                 jcblock -p /dev/portID
 
-        The entire program may be compiled with the following command: 
+        The entire program may be compiled with the following command:
 
         gcc -o jcblock jcblock.c tones.c truncate.c -lasound -ldl -lm
-  
+
 	Linux installations may or may not install the libasound library.
 	It is usually installed in /usr/lib. Also, the tones.c file
 	includes file asoundlib.h, which is usually located in directory
@@ -276,8 +277,8 @@
 	turned off at other times, no damage will occur to the USB memory.
 	On the outside chance that memory is damaged, the application USB
 	memory stick may be easily replaced. Since Knoppix loads into a
-	RAM disk, no damage can occur to it. 
-	
+	RAM disk, no damage can occur to it.
+
         Wrap-up:
 
         That about summarizes my experience with this project. The
